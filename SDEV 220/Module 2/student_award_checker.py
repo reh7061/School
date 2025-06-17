@@ -5,7 +5,6 @@
 #              Honor Roll (GPA >= 3.25). Processing stops when sentinel 'ZZZ'
 #              is entered for the last name.
 
-# Ask for and accept the student's last name  
 print("Student Honors Checker")
 print("To quit at any time, enter 'ZZZ' as the last name.\n")
 
