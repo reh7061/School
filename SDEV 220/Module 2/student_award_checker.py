@@ -9,12 +9,15 @@ print("Student Honors Checker")
 print("To quit at any time, enter 'ZZZ' as the last name.\n")
 
 # Priming input: get the first last name before the loop
-last_name = input("Enter student's last name: ")
+last_name_input = input("Enter student's last name (or 'ZZZ' to quit): ").strip()
 
 # Loop until the sentinel is entered
-while last_name != "ZZZ":
+while last_name_input != "ZZZ":
+    # Capitalize the last name for formatting
+    last_name = last_name_input.capitalize()
+
     # Get the first name and GPA for the current student
-    first_name = input("Enter student's first name: ")
+    first_name = input("Enter student's first name: ").capitalize().strip()
     gpa = float(input("Enter student's GPA (0.0-4.0): "))
 
     # Output the results based on GPA
@@ -27,7 +30,7 @@ while last_name != "ZZZ":
         print(f"{first_name} {last_name} did not make the Dean's List or Honor Roll.")
 
     # Read the next last name (sentinel check)
-    last_name = input("Enter student's last name (or 'ZZZ' to quit): ")
+    last_name_input = input("Enter student's last name (or 'ZZZ' to quit): ").strip()
 
 # End of the program
 print("End of student processing.")
